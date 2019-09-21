@@ -24,9 +24,18 @@ public class PlayerPlatformerController : PhysicsObject
 
         move.x = Input.GetAxis("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            velocity.y = jumpTakeOffSpeed;
+           /* int count = 2;
+            if (count > 0)
+            {
+                velocity.y = jumpTakeOffSpeed;
+                count--;
+            } */
+            for(int i = 2; i > 0; i--)
+            {
+                velocity.y = jumpTakeOffSpeed;
+            }
         }
         else if (Input.GetButtonUp("Jump"))
         {
