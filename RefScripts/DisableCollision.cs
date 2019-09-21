@@ -11,6 +11,8 @@
                 // disables branch collision
                 foreach (GameObject branch in branches) 
                     branch.GetComponent<BoxCollider2D>().enabled = false;
+                // could also disable beetle collision
+                // other.GetComponent<BoxCollider2D>().enabled = false;
                 // begins waiting routine
                 StartCoroutine(EnableBox(.8F));
             }
@@ -22,5 +24,7 @@
                 // turns on branch collision
                 foreach (GameObject branch in branches)
                     branch.GetComponent<BoxCollider2D>().enabled = true;
+                // if also diabling beetle collision
+                // other.GetComponent<BoxCollider2D>().enabled = true;
             }
         }
