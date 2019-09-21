@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhysicsObject : MonoBehaviour
+public class PhysicsObjectFH : MonoBehaviour
 {
 
     public float minGroundNormalY = .65f;
