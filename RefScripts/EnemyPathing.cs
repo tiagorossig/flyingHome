@@ -35,11 +35,13 @@ public class EnemyPathing : MonoBehaviour
         if (transform.position == waypoints[waypointIndex].transform.position)
         {
             waypointIndex += 1;
+            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         }
         // changes waypoint back to first in array
         if (waypointIndex == waypoints.Length)
         {
             waypointIndex = 0;
+            transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y);
         }
     }
 

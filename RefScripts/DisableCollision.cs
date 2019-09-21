@@ -5,16 +5,16 @@
         void OnTriggerEnter2D(Collider2D other)
         {
             // find all GameObjects tagged as Branch
+            // ANYTHING TAGGED AS "Branch" MUST HAVE A BOXCOLLIDER2D COMPONENT
             GameObject[] branches = GameObject.FindGameObjectsWithTag("Branch");
-            if (other.tag == "Beetle")
+            // edit tags as necessary
+            if (other.tag == "Beetle"  || other.tag == "Acorn" || other.tag == "Spider")
             {
                 // disables branch collision
                 foreach (GameObject branch in branches) 
                     branch.GetComponent<BoxCollider2D>().enabled = false;
-                // could also disable beetle collision
-                // other.GetComponent<BoxCollider2D>().enabled = false;
-                // begins waiting routine
-                StartCoroutine(EnableBox(.8F));
+                // begins waiting routine, should adjust time as necessary
+                StartCoroutine(EnableBox(.6F));
             }
 
             IEnumerator EnableBox(float waitTime)
@@ -24,7 +24,5 @@
                 // turns on branch collision
                 foreach (GameObject branch in branches)
                     branch.GetComponent<BoxCollider2D>().enabled = true;
-                // if also diabling beetle collision
-                // other.GetComponent<BoxCollider2D>().enabled = true;
             }
         }
