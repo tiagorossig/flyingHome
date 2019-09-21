@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Beetle
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1334434983
+    locked: 0
+  - name: Branch_1
+    uniqueID: 3079437065
+    locked: 0
+  - name: TreeTrunk
+    uniqueID: 3555722533
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Branch_2
+    uniqueID: 3916537979
+    locked: 0
+  - name: Platforms
+    uniqueID: 1807997789
+    locked: 0
+  - name: Character
+    uniqueID: 221905009
     locked: 0
