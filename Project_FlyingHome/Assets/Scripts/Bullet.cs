@@ -24,7 +24,15 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            GetComponent<Animator>().enabled = true;
+            StartCoroutine(Explosion(.75F));
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator Explosion(float waitTime)
+    {
+        // waits for set amount of time
+        yield return new WaitForSeconds(waitTime);
     }
 }
