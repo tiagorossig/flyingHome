@@ -1,0 +1,10 @@
+> Fix win mechanic
+> Add start screen (w/ cutscene)
+> Add options menu
+> Add sfx
+> Add credits
+> Update tree trunk sprite (fix tree coloring issues)
+> Update bg
+> Realign treetop
+> Add platforms into treetop
+> Fix box colliders
