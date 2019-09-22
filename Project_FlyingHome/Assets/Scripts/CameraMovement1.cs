@@ -5,7 +5,7 @@ public class CameraMovement1 : MonoBehaviour
 {
     //instance variables
     public Transform player;
-    private float center = 5;
+    private float center;
 
     // Update is called once per frame  
     void FixedUpdate()
@@ -14,15 +14,15 @@ public class CameraMovement1 : MonoBehaviour
         transform.position = new Vector3(0.0f, center, -10.0f);
 
         //if in screen 1, keep camera in screen 1
-        if (player.position.y < 25)
-            center = 5;
+        if (player.position.y < -5.5)
+            center = -7.6f;
 
         //if in screen 2, keep camera in screen 2
-        if (player.position.y > 25 && player.position.y < 65)
-            center = 45;
+        if (player.position.y > -5.5f && player.position.y < -1.3f)
+            center = -3.4f;
 
         //if in screen 3, keep camera in screen 3
-        if (player.position.y > 65 && player.position.y < 101)
+        if (player.position.y > -1.3f && player.position.y < 2.9f)
             center = 0.8f;
 
         //if in screen 4, keep camera in screen 4
