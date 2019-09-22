@@ -24,9 +24,10 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            rb.velocity = transform.right * 0;
             GetComponent<Animator>().enabled = true;
             StartCoroutine(Explosion(.75F));
-            Destroy(gameObject);
+            
         }
     }
 
@@ -34,5 +35,6 @@ public class Bullet : MonoBehaviour
     {
         // waits for set amount of time
         yield return new WaitForSeconds(waitTime);
+        Destroy(gameObject);
     }
 }

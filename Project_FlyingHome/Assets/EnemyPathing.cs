@@ -11,18 +11,18 @@ public class EnemyPathing : MonoBehaviour
     {
         if (speed == 0)
         {
-            speed = 2f;
+            speed = .2f;
         }
         // if true, moves to right
         if (MoveRight)
         {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-            transform.localScale = new Vector2(5, 5);
+            transform.localScale = new Vector3(.3281149f, .3281149f, 0);
         }
         else
         {
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
-            transform.localScale = new Vector2(-5, 5);
+            transform.localScale = new Vector3(-.3281149f, .3281149f, 0);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

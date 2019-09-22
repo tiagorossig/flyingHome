@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpecialPlatform : MonoBehaviour
+public class SpecialPlatformAA : MonoBehaviour
 {
     private PlatformEffector2D effector;
     public float waitTime;
