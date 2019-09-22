@@ -11,7 +11,7 @@ public class EnemyPathing : MonoBehaviour
     {
         if (speed == 0)
         {
-            speed = 2f;
+            speed = 1f;
         }
         // if true, moves to right
         if (MoveRight)
@@ -27,7 +27,7 @@ public class EnemyPathing : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "turn")
+        if (other.gameObject.CompareTag("turn"))
         {
             if(MoveRight)
             {

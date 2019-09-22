@@ -4,37 +4,35 @@ using UnityEngine;
 public class SpiderPathing : MonoBehaviour
 {
     public float speed;
-    public bool MoveRight;
+    public bool MoveUp;
 
     private void Update()
     {
         if (speed == 0)
         {
-            speed = 2f;
+            speed = .2f;
         }
         // if true, moves to right
-        if (MoveRight)
+        if (MoveUp)
         {
-            transform.Translate(2 * Time.deltaTime * speed, 0, 0);
-            transform.localScale = new Vector2(5, 5);
+            transform.Translate(0, 2 * Time.deltaTime * speed, 0);
         }
         else
         {
-            transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
-            transform.localScale = new Vector2(-5, 5);
+            transform.Translate(0, -2 * Time.deltaTime * speed, 0);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "turn")
+        if (other.gameObject.CompareTag("turn"))
         {
-            if (MoveRight)
+            if (MoveUp)
             {
-                MoveRight = false;
+                MoveUp = false;
             }
             else
             {
-                MoveRight = true;
+                MoveUp = true;
             }
         }
     }
