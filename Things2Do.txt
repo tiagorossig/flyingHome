@@ -1,3 +1,4 @@
+> Fix win mechanic
 > Add start screen (w/ cutscene)
 > Add options menu
 > Add sfx
