@@ -24,6 +24,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Animator>().enabled = true;
             StartCoroutine(Explosion(.75F));
             Destroy(gameObject);
