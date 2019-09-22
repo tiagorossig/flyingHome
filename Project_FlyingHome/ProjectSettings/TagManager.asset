@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Beetle
+  - turn
+  - Branch
+  - Acorn
   layers:
   - Default
   - TransparentFX
